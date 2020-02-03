@@ -10,7 +10,7 @@ from util import *
 
 @click.command()
 @click.option("--config", type=str, default=None, help="path to the config file")
-@click.option("--verbose", type=bool, default=False)
+@click.option('--verbose/--no-verbose', default=False)
 def run(config, verbose):
     if config is None:
         config = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")

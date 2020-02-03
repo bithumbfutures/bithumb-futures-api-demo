@@ -13,7 +13,7 @@ from util import *
 @click.option("--page", type=str, default=None, help="value for the page parameter")
 @click.option("--size", type=str, default=None, help="value for the pageSize parameter")
 @click.option("--config", type=str, default=None, help="path to the config file")
-@click.option("--verbose", type=bool, default=False)
+@click.option('--verbose/--no-verbose', default=False)
 def run(symbol, page, size, config, verbose):
     if config is None:
         config = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")
