@@ -1,7 +1,6 @@
 import os
 import click
 import requests
-import numpy as np 
 from pprint import pprint
 
 # Local imports 
