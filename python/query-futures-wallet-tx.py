@@ -9,13 +9,13 @@ from util import *
 
 
 @click.command()
+@click.option("--config", type=str, default=None, help="path to the config file")
 @click.option("--asset", type=str)
 @click.option("--page", type=int)
 @click.option("--pageSize", type=int)
 @click.option("--txType", type=click.Choice(["deposit", "withdrawal"]), default=None, help="transaction type, deposit/withdrawal/both, default is both")
-@click.option("--config", type=str, default=None, help="path to the config file")
 @click.option('--verbose/--no-verbose', default=False)
-def run(asset, page, pagesize, txtype, config, verbose):
+def run(config, asset, page, pagesize, txtype, verbose):
     if config is None:
         config = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")
         print(f"Config file is not specified, use {config}")
