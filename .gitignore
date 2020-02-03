@@ -3,3 +3,4 @@ __pycache__/
 python-bk/
 *.pyc
 config*.json
+workbench.sh
