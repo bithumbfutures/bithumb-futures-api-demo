@@ -8,7 +8,7 @@ from util import *
 
 
 @click.command()
-@click.option("--config", type=str, default=None, help="path to the config file")
+@click.option("--config", type=str, default="config.json", help="path to the config file")
 @click.option('--verbose/--no-verbose', default=False)
 def run(config, verbose):
     if config is None:
@@ -16,18 +16,18 @@ def run(config, verbose):
         print(f"Config file is not specified, use {config}")
     cfg = load_config(config)['bithumb-futures']
 
+
     host = cfg['https']
-    grp = cfg['group']
+    group = cfg['group']
     apikey = cfg['apikey']
     secret = cfg['secret']
 
-    url = f"{host}/{grp}/api/pro/v1/futures/risk"
-
     ts = utc_timestamp()
-    headers = make_auth_headers(ts, "futures/risk", apikey, secret)
+    headers = make_auth_headers(ts, "info", apikey, secret)
+    url = f"{host}/api/pro/v1/info"
 
-    if verbose: 
-        print(f"url = {url}")
+    if verbose:
+        print(f"Using url: {url}")
 
     res = requests.get(url, headers=headers)
     pprint(parse_response(res))

@@ -4,3 +4,4 @@ python-bk/
 *.pyc
 config*.json
 workbench.sh
+config/
