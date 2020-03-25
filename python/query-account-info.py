@@ -14,7 +14,6 @@ def run(config, verbose):
     
     cfg = load_config(get_config_or_default(config))['bithumbfutures']
 
-
     host = cfg['https']
     group = cfg['group']
     apikey = cfg['apikey']

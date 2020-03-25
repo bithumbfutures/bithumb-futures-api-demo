@@ -16,7 +16,11 @@ from util import *
 @click.option('--verbose/--no-verbose', default=False)
 def run(config, account, order_id, symbol, resp_inst, verbose):
     
+<<<<<<< HEAD
     cfg = load_config(get_config_or_default(config))['bithumbfutures']
+=======
+    cfg = load_config(get_config_or_default(config))['bithumb-futures']
+>>>>>>> 1ab34a8ec46c74780b20ad6011984dbce24a8eec
 
     host = cfg['https']
     group = cfg['group']
