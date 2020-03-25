@@ -1,7 +1,7 @@
 {
-  "bithumb-futures": {
-    "https": "https://bfutures.io",
-    "wss": "wss://bfutures.io:443",
+  "bithumbfutures": {
+    "https": "https://bithumbfutures.com",
+    "wss": "wss://bithumbfutures.com:443",
     "group": <your-group>,
     "apikey": "<your-api-key>",
     "secret": "<your-api-secret>"
